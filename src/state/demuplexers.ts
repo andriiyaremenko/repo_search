@@ -61,10 +61,8 @@ export async function* handleGithubApi(action: Action) {
                 break;
             }
             if (!action.search.term) {
-                console.log('canceled')
                 break;
             }
-            console.log(action)
             const search = action.search;
             const termS = `q=${search.term}`;
             const sortS = `sort=${search.sort}`;
